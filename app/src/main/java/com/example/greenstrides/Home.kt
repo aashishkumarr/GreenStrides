@@ -24,8 +24,8 @@ class Home : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        homeAvatar = view!!.findViewById<ImageView>(R.id.homeAvatarImageView) as ImageView
-        homeAvatar.setImageResource(R.drawable.avatar_sad)
+        homeAvatar = view.findViewById<ImageView>(R.id.homeAvatarImageView) as ImageView
+        homeAvatar.setImageResource(R.drawable.avatar_happy)
     }
 
 }

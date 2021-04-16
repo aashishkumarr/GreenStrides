@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectData"
+    android:layout_gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/collectDataScreenImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:contentDescription="logo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/collectDataScreenTextView"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/collectDataScreenImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:rotationX="-4"
+        android:text="Choose the type of car you use"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#4CAF50"
+        android:textSize="21sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/collectDataScreenTextView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/collectDataCheckboxView">
+
+        <CheckBox
+            android:id="@+id/collectDataSmallCarCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+
+            android:text="Small Car"
+
+            />
+
+        <CheckBox
+            android:id="@+id/collectDataMediumCarCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+
+            android:text="Medium Car"
+
+            android:layout_below="@+id/collectDataSmallCarCheckbox" />
+
+        <CheckBox
+            android:id="@+id/collectDataBigCarCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+
+            android:text="Big Car"
+
+            android:layout_below="@+id/collectDataMediumCarCheckbox" />
+
+        <CheckBox
+            android:id="@+id/collectDataElectricCarCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+
+            android:text="Electric Car"
+
+            android:layout_below="@+id/collectDataBigCarCheckbox" />
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/collectDataScreenNextButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/collectDataCheckboxView"
+        android:layout_marginTop="59dp"
+        android:background="#4CAF50"
+        android:text="Next"
+        android:textColor="#FFF">
+
+    </Button>
+
+</RelativeLayout>
+
