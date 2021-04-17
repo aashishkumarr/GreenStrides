@@ -6,15 +6,13 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.fragment.app.Fragment
 
 class MyWebViewClient internal constructor() : WebViewClient() {
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-        val url: String = request?.url.toString();
+        val url: String = request?.url.toString()
         view?.loadUrl(url)
         return true
     }

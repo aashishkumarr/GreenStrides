@@ -17,9 +17,9 @@ class Goals : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val myWebView: WebView = view.findViewById<WebView>(R.id.goalsWebview)
+        val myWebView: WebView = view.findViewById(R.id.goalsWebview)
         myWebView.webViewClient = MyWebViewClient()
-        myWebView!!.settings.javaScriptEnabled = true
+        myWebView.settings.javaScriptEnabled = true
         myWebView.loadUrl(UrlConstants.GOALS_VIEW)
     }
 }

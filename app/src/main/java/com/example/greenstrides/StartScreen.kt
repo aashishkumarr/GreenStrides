@@ -9,6 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 class StartScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val settings = getSharedPreferences("green_strides", 0)
+        val isFirstTimeUser = settings.getBoolean("firstTimeUser", true)
+
+        if (!isFirstTimeUser) {
+            // TODO redirect to the home page if already use the app before
+            val mainActivity = Intent(this, CollectData::class.java)
+            startActivity(mainActivity)
+        }
+
         setContentView(R.layout.activity_start_screen)
 
         if (supportActionBar != null)

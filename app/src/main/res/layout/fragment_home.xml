@@ -8,12 +8,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        tools:ignore="UselessParent">
         <WebView
             android:id="@+id/homeWebview"
             android:layout_width="320dp"
             android:layout_height="400dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
     </RelativeLayout>
