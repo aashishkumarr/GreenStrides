@@ -1,5 +1,7 @@
 package com.example.greenstrides
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.webkit.WebView
@@ -7,6 +9,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class CollectData : AppCompatActivity() {
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collect_data)
@@ -21,7 +24,7 @@ class CollectData : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.collectDataScreenNextButton)
         nextButton.setOnClickListener {
-            val settings = getSharedPreferences("green_strides", 0)
+            val settings = getSharedPreferences("green_strides", Context.MODE_PRIVATE)
             val editor = settings.edit()
             editor.putBoolean("firstTimeUser", false)
             editor.apply()

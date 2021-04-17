@@ -1,5 +1,6 @@
 package com.example.greenstrides
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,13 +11,14 @@ class StartScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val settings = getSharedPreferences("green_strides", 0)
+        val settings = getSharedPreferences("green_strides", Context.MODE_PRIVATE)
         val isFirstTimeUser = settings.getBoolean("firstTimeUser", true)
 
         if (!isFirstTimeUser) {
             // TODO redirect to the home page if already use the app before
             val mainActivity = Intent(this, CollectData::class.java)
             startActivity(mainActivity)
+            return
         }
 
         setContentView(R.layout.activity_start_screen)

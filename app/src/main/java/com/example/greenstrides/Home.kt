@@ -1,5 +1,6 @@
 package com.example.greenstrides
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,6 +24,7 @@ class Home : Fragment() {
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val myWebView: WebView = view.findViewById(R.id.homeWebview)
         myWebView.webViewClient = MyWebViewClient()
