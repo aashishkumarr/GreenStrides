@@ -26,23 +26,38 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
         android:rotationX="-4"
-        android:text="Import data from Google Maps"
+        android:text="@string/import_data_screen_title"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#4CAF50"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/importDataScreenNextButton"
-
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/importDataScreenTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/importDataScreenTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="108dp"
-        android:background="#4CAF50"
-        android:text="Next"
-        android:textColor="#FFF">
+        android:layout_marginTop="25dp"
+        android:rotationX="-4"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/import_data_screen_body"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/importDataScreenNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/import_data_button_text"
+        android:textColor="@color/white">
 
     </Button>
 

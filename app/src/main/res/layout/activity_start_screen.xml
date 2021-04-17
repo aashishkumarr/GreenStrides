@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:app="http://schemas.android.com/apk/res-auto"
-       xmlns:tools="http://schemas.android.com/tools"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       tools:context=".StartScreen"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
-       >
+    tools:context=".StartScreen">
 
    <ImageView
        android:id="@+id/startScreenImageView"
        android:layout_width="wrap_content"
-       android:layout_height="300dp"
-       android:contentDescription="logo"
+       android:layout_height="200dp"
        android:layout_centerHorizontal="true"
+       android:contentDescription="logo"
        android:src="@drawable/logo1" />
 
    <com.google.android.material.textview.MaterialTextView
@@ -26,23 +25,40 @@
        android:layout_centerHorizontal="true"
        android:layout_marginTop="51dp"
        android:rotationX="-4"
-       android:text="@string/start_screen_text"
+       android:text="@string/start_screen_title"
        android:textAlignment="center"
        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-       android:textColor="#4CAF50"
+       android:textColor="@color/colorPrimaryDark"
        android:textSize="40sp" />
 
-   <Button
-       android:id="@+id/startScreenNextButton"
-
+   <com.google.android.material.textview.MaterialTextView
+       android:id="@+id/startScreenTextView1"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_below="@+id/startScreenTextView"
        android:layout_centerHorizontal="true"
-       android:layout_marginTop="108dp"
-       android:background="#4CAF50"
-       android:text="Next"
-       android:textColor="#FFF">
+       android:layout_marginTop="25dp"
+       android:rotationX="-4"
+       android:paddingLeft="20dp"
+       android:paddingRight="20dp"
+       android:text="@string/start_screen_body"
+       android:textAlignment="center"
+       android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+       android:textColor="@color/colorPrimary"
+       android:textSize="25sp" />
+
+   <Button
+       android:id="@+id/startScreenNextButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="100dp"
+       android:background="@color/colorPrimary"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
+       android:text="@string/start_screen_button_text"
+       android:textColor="@color/white">
 
    </Button>
 

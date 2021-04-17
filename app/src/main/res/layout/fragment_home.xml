@@ -4,30 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:weightSum="100">
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_weight="75"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/homeAvatarImageView"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/homeAvatarTextView"
-                android:layout_width="wrap_content"
-                android:layout_below="@+id/homeAvatarImageView"
-                android:layout_height="wrap_content"
-                android:text="10% better than the national Average "/>
-
-        </RelativeLayout>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <WebView
+            android:id="@+id/homeWebview"
+            android:layout_width="320dp"
+            android:layout_height="400dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
 
 
 </FrameLayout>

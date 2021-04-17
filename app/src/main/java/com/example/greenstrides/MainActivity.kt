@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_baseline_home_24))
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_baseline_wb_incandescent_24))
         tabLayout.setSelectedTabIndicatorGravity(TabLayout.INDICATOR_GRAVITY_TOP)
-//        tabLayout.setSelectedTabIndicatorColor(resources.get)
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
         val adapter = MyAdapter(this, supportFragmentManager,

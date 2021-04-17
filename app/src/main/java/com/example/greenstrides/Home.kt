@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.ImageView
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -12,7 +13,6 @@ import androidx.fragment.app.Fragment
 
 
 class Home : Fragment() {
-    private lateinit var homeAvatar: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,8 +24,11 @@ class Home : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        homeAvatar = view.findViewById<ImageView>(R.id.homeAvatarImageView) as ImageView
-        homeAvatar.setImageResource(R.drawable.avatar_happy)
+        val myWebView: WebView = view.findViewById<WebView>(R.id.homeWebview)
+        myWebView.webViewClient = MyWebViewClient()
+        myWebView!!.settings.javaScriptEnabled = true
+        myWebView.loadUrl(UrlConstants.HOME_VIEW)
     }
+
 
 }

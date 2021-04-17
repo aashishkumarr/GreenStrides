@@ -18,7 +18,6 @@ import androidx.fragment.app.Fragment
 import java.util.*
 
 class Visualization : Fragment() {
-    val OBSERVABLE_NOTEBOOK_URL ="https://observablehq.com/embed/14ab270eb83c3ec2?cells=viewof+datasetSelector%2Cviewof+goal%2Cviewof+timeSelector%2Cbarchart%2Cviewof+monthSelector%2Cchart%2Cchart2"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,28 +28,10 @@ class Visualization : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val myWebView: WebView = view.findViewById<WebView>(R.id.visualizationWebview)
-        myWebView.webViewClient = MyWebViewClient(this)
+        myWebView.webViewClient = MyWebViewClient()
         myWebView!!.settings.javaScriptEnabled = true
-        myWebView.loadUrl(OBSERVABLE_NOTEBOOK_URL)
+        myWebView.loadUrl(UrlConstants.VISUALIZATION_VIEW)
     }
 
-    class MyWebViewClient internal constructor(private val activity: Fragment) : WebViewClient() {
 
-        @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-        override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-            val url: String = request?.url.toString();
-            view?.loadUrl(url)
-            return true
-        }
-
-        override fun shouldOverrideUrlLoading(webView: WebView, url: String): Boolean {
-            webView.loadUrl(url)
-            return true
-        }
-
-        override fun onReceivedError(view: WebView, request: WebResourceRequest, error: WebResourceError) {
-            Toast.makeText(activity.activity, "Got Error! $error", Toast.LENGTH_SHORT).show()
-            Log.e("ERROR_WEBVIEW",error.toString())
-        }
-    }
 }

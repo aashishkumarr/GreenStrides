@@ -6,16 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CollectData"
     android:layout_gravity="center"
-    >
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".CollectData">
 
     <ImageView
         android:id="@+id/collectDataScreenImageView"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:contentDescription="logo"
         android:layout_centerHorizontal="true"
+        android:contentDescription="logo"
         android:src="@drawable/logo1" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -26,82 +27,29 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
         android:rotationX="-4"
-        android:text="Choose the type of car you use"
+        android:text="@string/collect_data_screen_title"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#4CAF50"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="21sp" />
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/collectDataScreenTextView"
+    <WebView
+        android:id="@+id/collectDataWebview"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/collectDataCheckboxView">
-
-        <CheckBox
-            android:id="@+id/collectDataSmallCarCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-
-            android:text="Small Car"
-
-            />
-
-        <CheckBox
-            android:id="@+id/collectDataMediumCarCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-
-            android:text="Medium Car"
-
-            android:layout_below="@+id/collectDataSmallCarCheckbox" />
-
-        <CheckBox
-            android:id="@+id/collectDataBigCarCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-
-            android:text="Big Car"
-
-            android:layout_below="@+id/collectDataMediumCarCheckbox" />
-
-        <CheckBox
-            android:id="@+id/collectDataElectricCarCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-
-            android:text="Electric Car"
-
-            android:layout_below="@+id/collectDataBigCarCheckbox" />
-
-
-
-    </RelativeLayout>
+        android:layout_below="@+id/collectDataScreenTextView" />
 
     <Button
         android:id="@+id/collectDataScreenNextButton"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/collectDataCheckboxView"
-        android:layout_marginTop="59dp"
-        android:background="#4CAF50"
-        android:text="Next"
-        android:textColor="#FFF">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/collect_data_button_text"
+        android:textColor="@color/white">
 
     </Button>
 
