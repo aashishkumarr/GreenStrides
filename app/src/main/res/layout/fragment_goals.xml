@@ -4,9 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Goals">
-    <WebView
-        android:id="@+id/goalsWebview"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_gravity="center"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/collectDataScreenTextView"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:rotationX="-4"
+            android:text="@string/set_goal_label"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="21sp" />
+        <WebView
+            android:id="@+id/goalsWebview"
+            android:layout_width="320dp"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            />
+    </RelativeLayout>
 </FrameLayout>

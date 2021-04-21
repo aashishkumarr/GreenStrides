@@ -8,6 +8,7 @@
     <string name="import_data_button_text">Next</string>
     <string name="collect_data_screen_title">Choose the type of car you use</string>
     <string name="collect_data_button_text">Next</string>
+    <string name="set_goal_label">Set your Co2 emission goals</string>
 
 
 </resources>

@@ -35,7 +35,7 @@
     <WebView
         android:id="@+id/collectDataWebview"
         android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_height="240dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/collectDataScreenTextView" />
 

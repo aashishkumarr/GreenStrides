@@ -13,8 +13,8 @@
         <WebView
             android:id="@+id/homeWebview"
             android:layout_width="320dp"
-            android:layout_height="400dp"
-            android:layout_alignParentEnd="true"
+            android:layout_height="500dp"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             />
     </RelativeLayout>
